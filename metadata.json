@@ -1,0 +1,7 @@
+{
+  "name": " Bookmol BETA",
+  "description": "Aplicación móvil para lectores juveniles: biblioteca, seguimiento y comunidad creativa.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
