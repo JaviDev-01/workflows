@@ -23,7 +23,7 @@ function App() {
         await CapacitorUpdater.notifyAppReady();
 
         const update = await CapacitorUpdater.download({
-            url: 'https://github.com/JaviDev-01/workflows/releases/latest/download/update.zip',
+            url: 'https://github.com/JaviDev-01/Bookmol/releases/latest/download/update.zip',
             version: ''
         });
 
