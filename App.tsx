@@ -14,26 +14,11 @@ import {
 } from 'lucide-react';
 import { useAuth } from './context/AuthContext';
 import { auth } from './services/firebase';
-import { CapacitorUpdater } from '@capgo/capacitor-updater';
+import { checkForUpdates } from './ota';
 
 function App() {
   useEffect(() => {
-    const checkUpdate = async () => {
-      try {
-        await CapacitorUpdater.notifyAppReady();
-
-        const update = await CapacitorUpdater.download({
-            url: 'https://github.com/JaviDev-01/Bookmol/releases/latest/download/update.zip',
-            version: ''
-        });
-
-        await CapacitorUpdater.set(update);
-      } catch (err) {
-        console.log('No update available');
-      }
-    };
-
-    checkUpdate();
+    checkForUpdates();
   }, []);
 
   // --- Global State ---
